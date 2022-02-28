@@ -1,5 +1,6 @@
+ # Sudoku Chess Game Solver Using Java
 
-Backtracking Algorithm Summary
+# Backtracking Algorithm Summary
 
 The idea is to keep placing valid numbers in the solution cells 
 ascendingly (1 to 9). Kepe doing this unitl a random solution cell appears 
@@ -17,7 +18,7 @@ Tech With Tim
 https://www.youtube.com/watch?v=eqUwSA0xI-s&t=509s
 
 
-HOW TO USE
+# HOW TO USE
 
 . provide the text file directory of the puzzle you want to solve in FileInputStream()
 . create a ChessSudoku object
@@ -26,35 +27,18 @@ HOW TO USE
 . s.solve(false) solves the puzzle
 . s.print() prints the grid
 
-OTHERS
-
-. This version does not find all solutions of a puzzle therefore the boolean
-parameter in solve(boolean_param) always remains 'false'
-
-. if a puzzle has no solution, it throws an exception which prints "No Solution"
-
-. If the queen rule only applies for the number 9 for any SIZE x SIZE puzzle, then 
-make this change:
-(line 112) --> if (queenRule && num == 9)
-However, if the rule applies for the largest number in any SIZE x SIZE puzzle, 
-then leave it be
-eg:- SIZE 3 then 9, SIZE 4 then 16, SIZE 5 then 25 etc.
+# OTHERS
 
 
-
-
-UPDATE FROM PREVIOUS VERSION
-
-
-This version (v2) has the capability of finding all solutions. However, for very hard 4x4 or 5x5 puzzles 
-it will take a long time to run the code. THe algorithm will fins the orrect solutions, but 
+This algorithm has the capability of finding all solutions. However, for very hard 4x4 or 5x5 puzzles 
+it will take a long time to run the code. THe algorithm will fins the correct solutions, but 
 it will take a long time. You should try it yourself.
 
 The modification is simply after finsing a solution, backtrack once so that the algo tries
 to find another correct solution.
 
 
-VERY IMPORTANT THINGS TO NOTE
+# VERY IMPORTANT THINGS TO NOTE
 
 A - PRINTING ALL SOLUTIONS
 
@@ -93,6 +77,3 @@ C - s.print()
 The print method prints the grid matrix, in this algo the grid matrix resorts back to the text file
 puzzle sequence after finsing all the solutions. 
 All the solutions have been added to the solutions HashSet.
-
-
-
